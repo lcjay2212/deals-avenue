@@ -17,4 +17,8 @@ export class AdminComponent implements OnInit {
   toggleNavbar() {
     this.navbarOpen = !this.navbarOpen;
   }
+
+  goTo(page: string): void {
+    this.router.navigate([`./${page}`]);
+  }
 }

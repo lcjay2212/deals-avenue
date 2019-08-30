@@ -16,6 +16,7 @@ import { PromoApprovalComponent } from "./pages/promo/promo-approval/promo-appro
 import { PromoListComponent } from "./pages/promo/promo-list/promo-list.component";
 import { AddMerchantComponent } from "./pages/merchant/add-merchant/add-merchant.component";
 import { MerchantListComponent } from "./pages/merchant/merchant-list/merchant-list.component";
+import { TagsComponent } from "./pages/tags/tags.component";
 
 const routes: Routes = [
   {
@@ -38,6 +39,7 @@ const routes: Routes = [
       { path: "promos", component: PromoListComponent },
     ],
   },
+  { path: "tags", component: TagsComponent },
   { path: "login", component: LoginComponent },
   { path: "sign-up", component: SignUpComponent },
   { path: "", redirectTo: "login", pathMatch: "full" },

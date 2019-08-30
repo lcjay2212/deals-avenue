@@ -31,6 +31,7 @@ import { PromoListComponent } from "./pages/promo/promo-list/promo-list.componen
 import { MerchantListComponent } from "./pages/merchant/merchant-list/merchant-list.component";
 import { AddMerchantComponent } from "./pages/merchant/add-merchant/add-merchant.component";
 import { TagsComponent } from "./pages/tags/tags.component";
+import { CategoriesComponent } from './pages/categories/categories.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { TagsComponent } from "./pages/tags/tags.component";
     MerchantListComponent,
     AddMerchantComponent,
     TagsComponent,
+    CategoriesComponent,
   ],
   // tslint:disable-next-line: max-line-length
   imports: [

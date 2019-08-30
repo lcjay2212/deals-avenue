@@ -81,6 +81,6 @@ export class MerchantListComponent implements OnInit {
   }
 
   goto(value: string) {
-    this.router.navigate([`home`]);
+    this.router.navigate([`admin/merchant/${value}`]);
   }
 }

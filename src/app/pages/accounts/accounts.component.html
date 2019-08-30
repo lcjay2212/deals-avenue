@@ -4,54 +4,106 @@
 <div class="content">
   <div class="profile">
     <div class="card">
-      <img src="https://gilc11.sg-host.com/contents/uploads/users/1/profile/Ij7MUe2J8oeAIgNzgsCVrVNuey9i4hiW.png"
-        style="margin: 10px;">
-      <button type="button" class="btn btn-primary" style="margin: 10px;">Change Profile
-        Picture</button>
+      <img src="https://gilc11.sg-host.com/contents/uploads/users/1/profile/Ij7MUe2J8oeAIgNzgsCVrVNuey9i4hiW.png" style="margin: 10px;" />
+
+      <button type="button" class="btn btn-primary" (click)="openModal(template)">Change Profile Picture</button>
+
+      <ng-template #template>
+        <div class="modal-header">
+          <h4 class="modal-title pull-left">Change Profile Picture</h4>
+          <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group m-form__group col-lg-6 offset-3" (click)="modalUploadPicture()">
+            <button type="button" class="btn btn-primary btn-block">Upload Picture</button>
+          </div>
+          <div class="form-group m-form__group col-lg-6 offset-3">
+            <button type="button" class="btn btn-primary btn-block" (click)="modalTakePicture()">Take a picture</button>
+          </div>
+        </div>
+      </ng-template>
+
       <span>Marchael Mendiola</span>
       <a href="" style="margin: 10px;">marchael21@gmail.com</a>
     </div>
   </div>
 
   <div class="profile-info">
-
     <div class="card">
       <form>
-        <div class="row">
-          <h3 style="margin: 10px;">Personal Information</h3>
-        </div>
-        <div class="row">
-          <label for="text-input" class="col-3">Full Name</label>
-          <div class="col-7">
-            <p class="forcontrol">Marchael C Mendiola</p>
+        <div *ngIf="!showInput">
+          <div class="row">
+            <h3 style="margin: 10px;">Personal Information</h3>
+          </div>
+          <div class="row">
+            <label for="text-input" class="col-3">Full Name</label>
+            <div class="col-7">
+              <p class="forcontrol">Marchael C Mendiola</p>
+            </div>
+          </div>
+          <div class="row">
+            <label for="text-input" class="col-3">Address</label>
+            <div class="col-7">
+              <p>
+                San Mariano, San Antonio Nueva Ecija
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <label for="text-input" class="col-3">Phone No.</label>
+            <div class="col-7">
+              <p>
+                09567336098
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <label for="text-input" class="col-3">Position</label>
+            <div class="col-7">
+              <p class="forcontrol">Software Developer</p>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <label for="text-input" class="col-3">Address</label>
-          <div class="col-7">
-            <p>
-              San
-              Mariano, San Antonio Nueva Ecija</p>
+
+        <div *ngIf="showInput">
+          <div class="row">
+            <h3 style="margin: 10px;">Personal Information</h3>
+          </div>
+          <div class="row">
+            <label for="text-input" class="col-3">Full Name</label>
+            <div class="col-7">
+              <input type="text" class="form-control" value="Marchael C Mendiola" />
+            </div>
+          </div>
+          <div class="row">
+            <label for="text-input" class="col-3">Address</label>
+            <div class="col-7">
+              <input type="text" class="form-control" value=" San Mariano, San Antonio Nueva Ecija" />
+            </div>
+          </div>
+          <div class="row">
+            <label for="text-input" class="col-3">Phone No.</label>
+            <div class="col-7">
+              <input type="text" class="form-control" value=" 09567336098" />
+            </div>
+          </div>
+          <div class="row">
+            <label for="text-input" class="col-3">Position</label>
+            <div class="col-7">
+              <input type="text" class="form-control" value="Software Developer" />
+            </div>
           </div>
         </div>
-        <div class="row">
-          <label for="text-input" class="col-3">Phone No.</label>
-          <div class="col-7">
-            <p>
-              09567336098</p>
-          </div>
-        </div>
-        <div class="row">
-          <label for="text-input" class="col-3">Position</label>
-          <div class="col-7">
-            <p class="forcontrol">Software Developer</p>
-          </div>
-        </div>
+
         <div class="update">
-          <button type="button" class="btn btn-primary">Update Personal
-            Information</button>
+          <button type="button" class="btn btn-primary" *ngIf="!showInput" (click)="updateInfo()">Update Personal Information</button>
+          <button type="button" class="btn btn-primary" *ngIf="showInput" (click)="updateInfo()">Save</button>
         </div>
-        <hr>
+      </form>
+      <hr />
+      <form>
         <div class="row">
           <div class="col-9 ml-auto">
             <h3>Account Information</h3>
@@ -59,8 +111,7 @@
         </div>
         <div class="margin-top-10">
           <div class="alert alert-info" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            </button>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
             <strong>Tips:</strong> To update account/security settings go to account settings tab.
           </div>
         </div>
@@ -79,7 +130,7 @@
         <div class="row">
           <label for="text-input" class="col-3">Role</label>
           <div class="col-7">
-            <p>Admin
+            <p>Admin</p>
           </div>
         </div>
       </form>

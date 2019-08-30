@@ -17,47 +17,47 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-6  ">
+          <div class="col-lg-6">
             <label>Email:</label>
             <input type="text" class="form-control" placeholder="Enter email">
           </div>
-          <div class="col-lg-6  ">
+          <div class="col-lg-6">
             <label>Mobile Number:</label>
             <input type="text" class="form-control" placeholder="Enter mobile_number">
           </div>
         </div>
 
         <div class="row">
-          <div class="col-lg-6  ">
+          <div class="col-lg-6">
             <label>Password:</label>
             <div class="input-group">
-              <input type="password" class="form-control" placeholder="Enter password" show-password="showPassword"
-                autocomplete="new-password">
+              <input type="{{showPassword ? 'password' : 'type'}}" class="form-control" placeholder="Enter password">
               <div class="input-group-append">
-                <button class="btn btn-secondary" type="button" *ngIf="!showConfirmPassword"
-                  click="showPassword()">show</button>
+                <button class="btn btn-secondary" type="button" *ngIf="showPassword"
+                  (click)="getPassword()">show</button>
               </div>
-              <button class="btn btn-secondary" type="button" *ngIf="showConfirmPassword"
-                click="showPassword()">hide</button>
+              <button class="btn btn-secondary" type="button" *ngIf="!showPassword"
+                (click)="getPassword()">hide</button>
             </div>
           </div>
-          <div class="col-lg-6  ">
+          <div class="col-lg-6">
             <label>Confirm Password:</label>
             <div class="input-group">
-              <input type="password" class="form-control" placeholder="Re-enter password">
+              <input type="{{showConfirmPassword ? 'password' : 'type'}}" class="form-control"
+                placeholder="Re-enter password">
               <div class="input-group-append">
-                <button class="btn btn-secondary" type="button" *ngIf="!showConfirmPassword"
-                  click="showPassword()">show</button>
+                <button class="btn btn-secondary" type="button" *ngIf="showConfirmPassword"
+                  (click)="getConfirmPassword()">show</button>
               </div>
-              <button class="btn btn-secondary" type="button" *ngIf="showConfirmPassword"
-                click="showPassword()">hide</button>
+              <button class="btn btn-secondary" type="button" *ngIf="!showConfirmPassword"
+                (click)="getConfirmPassword()">hide</button>
             </div>
           </div>
         </div>
 
         <div class="row">
           <div class="offset-4 col-lg-4">
-            <button type="button" class="btn btn-primary btn-block" ng-disabled="btnSave">Save</button>
+            <button type="button" class="btn btn-primary btn-block" (click)="goto('list')">Save</button>
           </div>
         </div>
       </form>
@@ -116,7 +116,7 @@
           <p><b>Result:</b></p>
         </div>
         <div class="offset-4 col-lg-4">
-          <button type="button" class="btn btn-primary btn-block">Generate</button>
+          <button type="button" class="btn btn-primary btn-block" (click)="goto('list')">Generate</button>
         </div>
       </form>
     </div>

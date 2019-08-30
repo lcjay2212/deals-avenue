@@ -24,10 +24,11 @@ import { SignUpComponent } from "./component/login/sign-up/sign-up.component";
 //ngx-bootstrap
 import { TooltipModule } from "ngx-bootstrap/tooltip";
 import { ListUserComponent } from "./pages/user/list-user/list-user.component";
-import { PromoApprovalComponent } from './pages/promo/promo-approval/promo-approval.component';
-import { PromoListComponent } from './pages/promo/promo-list/promo-list.component';
-import { MerchantListComponent } from './pages/merchant/merchant-list/merchant-list.component';
-import { AddMerchantComponent } from './pages/merchant/add-merchant/add-merchant.component';
+import { PromoApprovalComponent } from "./pages/promo/promo-approval/promo-approval.component";
+import { PromoListComponent } from "./pages/promo/promo-list/promo-list.component";
+import { MerchantListComponent } from "./pages/merchant/merchant-list/merchant-list.component";
+import { AddMerchantComponent } from "./pages/merchant/add-merchant/add-merchant.component";
+import { ModalModule } from "ngx-bootstrap/modal";
 
 @NgModule({
   declarations: [
@@ -52,7 +53,7 @@ import { AddMerchantComponent } from './pages/merchant/add-merchant/add-merchant
     AddMerchantComponent,
   ],
   // tslint:disable-next-line: max-line-length
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, FormsModule, BrowserAnimationsModule, TooltipModule.forRoot()],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, FormsModule, BrowserAnimationsModule, TooltipModule.forRoot(), ModalModule.forRoot()],
   providers: [],
   bootstrap: [AppComponent],
 })

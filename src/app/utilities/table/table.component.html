@@ -21,6 +21,9 @@
           {{content.name === "Success" ? 'ACTIVE' : 'IN ACTIVE'}}
         </div>
         <div *ngIf="!content.type" [ngClass]="{'class': true}">{{content}}</div>
+        <div *ngIf="content.type === 'image'" [ngClass]="{'class': true}"><img src="{{content.name}}" width="100vh"
+            height="50vh">
+        </div>
       </td>
 
       <!-- ACTION ICONS -->

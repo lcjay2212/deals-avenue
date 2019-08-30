@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-add-user",
@@ -6,12 +7,20 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./add-user.component.css"],
 })
 export class AddUserComponent implements OnInit {
-  showConfirmPassword = false;
-  constructor() {}
+  showPassword = true;
+  showConfirmPassword = true;
+  constructor(public router: Router) {}
 
   ngOnInit() {}
 
-  showPassword() {
+  getPassword() {
+    this.showPassword = !this.showPassword;
+  }
+  getConfirmPassword() {
     this.showConfirmPassword = !this.showConfirmPassword;
+  }
+
+  goto(value) {
+    this.router.navigate([`admin/user/${value}`]);
   }
 }

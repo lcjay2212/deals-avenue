@@ -4,7 +4,8 @@
 <div class="content">
   <div class="profile">
     <div class="card">
-      <img src="https://gilc11.sg-host.com/contents/uploads/users/1/profile/Ij7MUe2J8oeAIgNzgsCVrVNuey9i4hiW.png" style="margin: 10px;" />
+      <img src="https://gilc11.sg-host.com/contents/uploads/users/1/profile/Ij7MUe2J8oeAIgNzgsCVrVNuey9i4hiW.png"
+        style="margin: 10px;" />
 
       <button type="button" class="btn btn-primary" (click)="openModal(template)">Change Profile Picture</button>
 
@@ -17,7 +18,9 @@
         </div>
         <div class="modal-body">
           <div class="form-group m-form__group col-lg-6 offset-3" (click)="modalUploadPicture()">
-            <button type="button" class="btn btn-primary btn-block">Upload Picture</button>
+            <button type="button" class="btn btn-primary btn-block" (click)="performClick('theFile')">Upload
+              Picture</button>
+
           </div>
           <div class="form-group m-form__group col-lg-6 offset-3">
             <button type="button" class="btn btn-primary btn-block" (click)="modalTakePicture()">Take a picture</button>
@@ -98,7 +101,8 @@
         </div>
 
         <div class="update">
-          <button type="button" class="btn btn-primary" *ngIf="!showInput" (click)="updateInfo()">Update Personal Information</button>
+          <button type="button" class="btn btn-primary" *ngIf="!showInput" (click)="updateInfo()">Update Personal
+            Information</button>
           <button type="button" class="btn btn-primary" *ngIf="showInput" (click)="updateInfo()">Save</button>
         </div>
       </form>

@@ -1,0 +1,17 @@
+.card {
+  margin: 1rem;
+}
+
+.row {
+  margin: 1rem;
+  text-align: left;
+}
+
+.fill-up {
+  text-align: center;
+  margin: 1rem;
+}
+
+form {
+  margin: 1rem;
+}

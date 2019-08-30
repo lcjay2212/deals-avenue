@@ -1,0 +1,54 @@
+<table class="table table-sm table-bordered table-striped" *ngFor="let table of tableContents">
+  <thead class="thead-dark ">
+    <tr>
+      <!-- HEADER -->
+      <th scope="col" *ngFor="let header of table.header" class="{{header === 'Action' ? 'text-center': ''}} index">
+        {{header}}
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <!-- INDEX -->
+    <tr *ngFor="let row of table.rows, let i = index">
+      <th scope="row" class="index">{{i + 1}}</th>
+
+      <!-- ROW CONTENT -->
+      <td *ngFor="let content of row.contents; let i = index" (click)="goto(row.id,'navigate')">
+        <a *ngIf="content.type === 'url'" [routerLink]="content.link">{{content.name}}</a>
+        <div *ngIf="content.type === 'verified'"
+          [ngClass]="content.name === 'Success' ? 'text-success' : 'text-danger'">
+          {{content.name === "Success" ? 'ACTIVE' : 'IN ACTIVE'}}
+        </div>
+        <div *ngIf="!content.type" [ngClass]="{'class': true}">{{content}}</div>
+      </td>
+
+      <!-- ACTION ICONS -->
+      <td class="text-center" *ngIf="row.actions && row.actions.type === 'icon'">
+        <i *ngFor="let action of row.actions.list" class="{{action.fa}} fa-2x mr-2 action-{{action.event}}"
+          (click)="setAction(i,action.event, row.details)"></i>
+      </td>
+
+      <!-- ACTION BUTTONs -->
+      <td class="text-center" *ngIf="row.actions && row.actions.type === 'button'">
+        <button *ngFor="let action of row.actions.list" class="btn btn-{{action.color}}"
+          (click)="setAction(row.id,action.event,row.details)"><b>{{action.name}}</b></button>
+      </td>
+
+      <!-- SUBCRIBE/UNSUBCRIBE -->
+      <td *ngFor="let content of row.contentContactorTemplate; let i = index">
+        <div *ngIf="content.type === 'subscribed'">
+          <button class="btn btn-success" *ngIf="content.subscribed"
+            (click)="setAction(row.id,'unsubscribed',row.details)">
+            subscribed
+          </button>
+          <button class="btn btn-danger" *ngIf="!content.subscribed"
+            (click)="setAction(row.id,'subscribed',row.details)">
+            unsubscribed
+          </button>
+        </div>
+      </td>
+
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,17 @@
+<div class="content">
+  <div class="container-fluid">
+    <div class="row col-lg-12">
+      <h3 class="text col-lg-3">
+        Merchant List
+      </h3>
+      <div class="col-lg-9">
+        <button routerLink="merchant/add" routerLinkActive="active" class="btn btn-primary pull-right">Add New
+          Merchant</button>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <app-table [tableContents]="tableContents" (action)="getAction($event)"></app-table>
+  </div>
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,13 @@
+.card {
+  margin: 1rem;
+}
+
+select {
+  display: inline-block;
+  width: 75px;
+}
+
+.row {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}

@@ -1,0 +1,118 @@
+.login-container {
+  display: flex;
+  height: 100%;
+}
+
+.login-deals {
+  flex: 1;
+  background-image: url('../../../assets/images/deals-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: 100;
+}
+
+.login-deals-avenue {
+  font-family: 'Arial Black';
+  color: #f2f3f8;
+  text-align: center;
+  font-size: 4.5rem;
+  margin-top: 1rem;
+}
+
+.avenue {
+  color: gold;
+}
+
+.login-deals-advertise {
+  font-family: 'Arial';
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-top: 22rem;
+  margin-left: 2.5rem;
+}
+
+.login-form-container {
+  flex: 2;
+  background-color: #f2f3f8;
+}
+
+.login-forms {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 15rem;
+}
+
+.login-forms-title {
+  margin-block-start: 1em;
+  margin-block-end: 3rem;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-size: 26px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.forgot-password {
+  display: block;
+}
+
+.user {
+  border-radius: 40px;
+  border: none;
+  padding: 2rem 2.14rem;
+  margin-top: 1.3rem;
+  background-color: #f7f7f9;
+  width: 32rem;
+}
+
+.display-block {
+  display: block;
+}
+
+
+.deals-web {
+  color: #b4a3c0 !important;
+}
+
+.deals-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px !important;
+  box-sizing: border-box;
+}
+
+.deals-section>a {
+  color: #f7f7f9;
+}
+
+.sign-in {
+  border-radius: 40px;
+  border: none;
+  padding: 1.2rem 14.3rem;
+  margin-top: 1.3rem;
+}
+
+.deals-sign-up {
+  margin-top: 2rem;
+  color: #a9a5b6 !important;
+}
+
+.up {
+  color: red;
+  cursor: pointer;
+}
+
+.forgot-password {
+  cursor: pointer;
+  color: #997ef7 !important;
+}

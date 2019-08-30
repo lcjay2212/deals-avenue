@@ -1,0 +1,38 @@
+.content {
+  display: flex;
+  height: 100%;
+}
+
+.profile {
+  flex: 1;
+}
+
+.profile-info {
+  flex: 2;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.card {
+  align-items: center;
+  margin: 1rem;
+}
+
+.row {
+  justify-content: center;
+}
+
+.update {
+  text-align: center;
+}
+
+img {
+  padding: 8px;
+  display: inline-block;
+  margin: 2rem auto;
+  border-radius: 100%;
+  border: 2px solid #f4f5f8;
+}

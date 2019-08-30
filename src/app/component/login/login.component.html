@@ -1,0 +1,29 @@
+<div class="login-container">
+  <div class="login-deals">
+    <img class="login-deals-img">
+    <div>
+      <h1 class="login-deals-avenue">Deals<span class="avenue">Avenue</span></h1>
+      <h2 class="login-deals-advertise">Advertise at Deals Avenue, create merchant account now!</h2>
+    </div>
+    <footer>
+      <div class="deals-section">
+        <a href="#" class="deals-web">© 2019 DEALS AVENUE</a>
+        <a href="#">Privacy</a>
+        <a href="#">Legal</a>
+        <a href="#">Contact</a>
+      </div>
+    </footer>
+  </div>
+  <div class="login-form-container">
+    <a class="pull-right deals-sign-up mr-4"><b>Don't have an account?</b> <span class="up"><b> Sign Up</b></span></a>
+    <div class="clearfix"></div>
+    <div class="login-forms">
+      <h4 class="login-forms-title">Merchant Login</h4>
+      <input type="email" class="form-control user" id="email" placeholder="Enter email">
+      <input type="text" class="form-control user" id="password" placeholder="Enter password">
+      <button class="btn btn-primary mt-4 sign-in" (click)="goto($event)">Sign In</button>
+      <a class="forgot-password mt-3">Forgot Password?</a>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

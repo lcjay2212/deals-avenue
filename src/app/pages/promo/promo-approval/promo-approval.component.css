@@ -1,5 +1,5 @@
 .card {
-  margin: 1rem;
+  margin: 3rem;
 }
 
 select {
@@ -10,4 +10,8 @@ select {
 .row {
   margin-left: 1rem;
   margin-right: 1rem;
+}
+
+.filters {
+  margin: 1rem;
 }

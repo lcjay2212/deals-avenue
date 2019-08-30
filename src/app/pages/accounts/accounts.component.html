@@ -18,7 +18,7 @@
         </div>
         <div class="modal-body">
           <div class="form-group m-form__group col-lg-6 offset-3" (click)="modalUploadPicture()">
-            <button type="button" class="btn btn-primary btn-block" (click)="performClick('theFile')">Upload
+            <button type="button" class="btn btn-primary btn-block">Upload
               Picture</button>
 
           </div>
@@ -41,30 +41,30 @@
             <h3 style="margin: 10px;">Personal Information</h3>
           </div>
           <div class="row">
-            <label for="text-input" class="col-3">Full Name</label>
-            <div class="col-7">
+            <label for="text-input" class="col-4">Full Name:</label>
+            <div class="col-8">
               <p class="forcontrol">Marchael C Mendiola</p>
             </div>
           </div>
           <div class="row">
-            <label for="text-input" class="col-3">Address</label>
-            <div class="col-7">
+            <label for="text-input" class="col-4">Address:</label>
+            <div class="col-8">
               <p>
                 San Mariano, San Antonio Nueva Ecija
               </p>
             </div>
           </div>
           <div class="row">
-            <label for="text-input" class="col-3">Phone No.</label>
-            <div class="col-7">
+            <label for="text-input" class="col-4">Phone No.:</label>
+            <div class="col-8">
               <p>
-                09567336098
+                09567336096
               </p>
             </div>
           </div>
           <div class="row">
-            <label for="text-input" class="col-3">Position</label>
-            <div class="col-7">
+            <label for="text-input" class="col-4">Position:</label>
+            <div class="col-8">
               <p class="forcontrol">Software Developer</p>
             </div>
           </div>
@@ -75,35 +75,47 @@
             <h3 style="margin: 10px;">Personal Information</h3>
           </div>
           <div class="row">
-            <label for="text-input" class="col-3">Full Name</label>
-            <div class="col-7">
-              <input type="text" class="form-control" value="Marchael C Mendiola" />
+            <label for="text-input" class="col-4">First Name:</label>
+            <div class="col-8">
+              <input type="text" class="form-control" value="Marchael" />
             </div>
           </div>
           <div class="row">
-            <label for="text-input" class="col-3">Address</label>
-            <div class="col-7">
+            <label for="text-input" class="col-4">Middle:</label>
+            <div class="col-8">
+              <input type="text" class="form-control" value="C" />
+            </div>
+          </div>
+          <div class="row">
+            <label for="text-input" class="col-4">Last Name:</label>
+            <div class="col-8">
+              <input type="text" class="form-control" value="Mendiola" />
+            </div>
+          </div>
+          <div class="row">
+            <label for="text-input" class="col-4">Address:</label>
+            <div class="col-8">
               <input type="text" class="form-control" value=" San Mariano, San Antonio Nueva Ecija" />
             </div>
           </div>
           <div class="row">
-            <label for="text-input" class="col-3">Phone No.</label>
-            <div class="col-7">
-              <input type="text" class="form-control" value=" 09567336098" />
+            <label for="text-input" class="col-4">Phone No.:</label>
+            <div class="col-8">
+              <input type="text" class="form-control" value=" 09568336098" />
             </div>
           </div>
           <div class="row">
-            <label for="text-input" class="col-3">Position</label>
-            <div class="col-7">
+            <label for="text-input" class="col-4">Position:</label>
+            <div class="col-8">
               <input type="text" class="form-control" value="Software Developer" />
             </div>
           </div>
         </div>
 
-        <div class="update">
+        <div class="update mt-3">
           <button type="button" class="btn btn-primary" *ngIf="!showInput" (click)="updateInfo()">Update Personal
             Information</button>
-          <button type="button" class="btn btn-primary" *ngIf="showInput" (click)="updateInfo()">Save</button>
+          <button type="button" class="btn btn-primary col-md-6" *ngIf="showInput" (click)="updateInfo()">Save</button>
         </div>
       </form>
       <hr />

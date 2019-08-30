@@ -41,4 +41,12 @@
       </div>
     </div>
   </div>
+  <div>
+    User Signup Demographics
+    <div style="display: block;">
+      <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+        [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType" height="30" width="100vw">
+      </canvas>
+    </div>
+  </div>
 </div>

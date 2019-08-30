@@ -34,11 +34,11 @@ const routes: Routes = [
         children: [{ path: "add", component: AddMerchantComponent }, { path: "list", component: MerchantListComponent }],
       },
 
-      { path: "report", component: ReportsComponent },
       { path: "promo-approval", component: PromoApprovalComponent },
       { path: "promos", component: PromoListComponent },
     ],
   },
+  { path: "report", component: ReportsComponent },
   { path: "tags", component: TagsComponent },
   { path: "login", component: LoginComponent },
   { path: "sign-up", component: SignUpComponent },

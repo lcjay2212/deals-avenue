@@ -2,6 +2,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { AppRoutingModule } from "./app-routing.module";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { ChartsModule } from "ng2-charts";
 
 //component
 import { AppComponent } from "./app.component";
@@ -55,7 +56,16 @@ import { TagsComponent } from "./pages/tags/tags.component";
     TagsComponent,
   ],
   // tslint:disable-next-line: max-line-length
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, FormsModule, BrowserAnimationsModule, TooltipModule.forRoot(), ModalModule.forRoot()],
+  imports: [
+    ChartsModule,
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    TooltipModule.forRoot(),
+    ModalModule.forRoot(),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
